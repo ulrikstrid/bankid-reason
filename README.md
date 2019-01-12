@@ -1,6 +1,6 @@
 # bankid-reason
 
-[![Build Status](https://some_url_here)](https://some_url_here?branchName=master)
+[![Build Status](https://dev.azure.com/strid/OSS/_apis/build/status/ulrikstrid.bankid-reason?branchName=master)](https://dev.azure.com/strid/OSS/_build/latest?definitionId=22?branchName=master)
 
 A cli and library for using Swedish BankID from native Reason and OCaml.
 
