@@ -1,0 +1,47 @@
+{
+  "name": "bankid-reason",
+  "version": "0.1.0",
+  "description": "BankID client in Reason",
+  "license": "MIT",
+  "esy": {
+    "build": "refmterr dune build -p #{self.name}",
+    "NOTE": "Optional release Section. Customizes result of `esy release`",
+    "release": {
+      "bin": [
+        "BankId.exe"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "esy x BankId.exe",
+    "watch": "esy dune build -p #{self.name} --watch"
+  },
+  "dependencies": {
+    "@opam/dune": "*",
+    "@reason-native/console": "*",
+    "@reason-native/pastel": "*",
+    "@reason-native/rely": "*",
+    "@esy-ocaml/reason": "*",
+    "refmterr": "*",
+    "ocaml": "~4.6.0",
+    "@opam/httpkit": "*",
+    "@opam/httpkit-lwt": "*",
+    "@opam/httpaf": "*",
+    "@opam/httpaf-lwt": "*",
+    "@opam/tls": "*",
+    "@opam/fpath": "*",
+    "@opam/logs": "*",
+    "@opam/fmt": "*",
+    "@opam/cmdliner": "*"
+  },
+  "resolutions": {
+    "@opam/httpkit": "ulrikstrid/httpkit:httpkit.opam#322ca26",
+    "@opam/httpkit-lwt": "link:../httpkit/httpkit-lwt.opam",
+    "@opam/httpaf": "anmonteiro/httpaf:httpaf.opam#57e9dd2",
+    "@opam/httpaf-lwt": "anmonteiro/httpaf:httpaf-lwt.opam#57e9dd2"
+  },
+  "devDependencies": {
+    "@opam/merlin": "*",
+    "ocaml": "~4.6.0"
+  }
+}

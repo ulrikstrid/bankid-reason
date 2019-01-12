@@ -1,0 +1,12 @@
+(library
+  (name lib)
+  (flags (-w -40 -w +26))
+  (public_name bankid)
+  (libraries
+    console.lib
+    pastel.lib
+    httpkit-lwt
+    httpaf-lwt
+    lwt
+    lwt.unix
+  ))

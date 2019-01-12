@@ -1,0 +1,17 @@
+(executable
+  (name BankId)
+  (package bankid)
+  (public_name BankId.exe)
+  (libraries
+    lib
+    lwt
+    lwt.unix
+    logs.fmt
+    fmt.tty
+    cmdliner
+  ))
+
+(install
+  (section bin)
+  (package bankid) 
+  (files FPTestcert2_20150818_102329.crt cert.crt TestBankIDSSLRootCAv1Test.crt))
