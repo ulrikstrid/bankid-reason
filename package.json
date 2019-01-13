@@ -35,8 +35,8 @@
     "@opam/cmdliner": "*"
   },
   "resolutions": {
-    "@opam/httpkit": "ulrikstrid/httpkit:httpkit.opam#322ca26",
-    "@opam/httpkit-lwt": "link:../httpkit/httpkit-lwt.opam",
+    "@opam/httpkit": "ostera/httpkit:httpkit.opam#5ffcdeb",
+    "@opam/httpkit-lwt": "ostera/httpkit:httpkit-lwt.opam#5ffcdeb",
     "@opam/httpaf": "anmonteiro/httpaf:httpaf.opam#57e9dd2",
     "@opam/httpaf-lwt": "anmonteiro/httpaf:httpaf-lwt.opam#57e9dd2"
   },
