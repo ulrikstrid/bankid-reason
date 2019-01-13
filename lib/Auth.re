@@ -8,3 +8,18 @@ let req = pno =>
      );
 
 let auth = (config, pno) => req(pno) |> Util.sendReqWithConfig(config);
+
+type authResponse = {
+  orderRef: string,
+  autoStartToken: string,
+};
+
+let parseResponse = json =>
+  Yojson.Basic.from_string(json)
+  |> (
+    j =>
+      Yojson.Basic.Util.{
+        orderRef: j |> member("orderRef") |> to_string,
+        autoStartToken: j |> member("autoStartToken") |> to_string,
+      }
+  );

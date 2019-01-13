@@ -9,4 +9,5 @@
     httpaf-lwt
     lwt
     lwt.unix
+    yojson
   ))

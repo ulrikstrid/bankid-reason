@@ -11,7 +11,5 @@ let error_to_string =
   | `Connection_error(error) => connection_error_to_string(error)
   | `Reading_error => "Something went wrong when reading the body";
 
-let sendReqWithConfig = (config, req) =>
-  Httpkit_lwt.Client.(
-    Https.send(~config, req) >>= Response.body |> Lwt_main.run
-  );
+let sendReqWithConfig = (config, req): Lwt.t(result(string, 'a)) =>
+  Httpkit_lwt.Client.(Https.send(~config, req) >>= Response.body);

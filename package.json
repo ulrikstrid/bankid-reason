@@ -32,7 +32,8 @@
     "@opam/fpath": "*",
     "@opam/logs": "*",
     "@opam/fmt": "*",
-    "@opam/cmdliner": "*"
+    "@opam/cmdliner": "*",
+    "@opam/yojson": "*"
   },
   "resolutions": {
     "@opam/httpkit": "ostera/httpkit:httpkit.opam#5ffcdeb",
@@ -42,6 +43,9 @@
   },
   "devDependencies": {
     "@opam/merlin": "*",
-    "ocaml": "~4.6.0"
+    "ocaml": "~4.6.0",
+    "@opam/odig": "*",
+    "@opam/ocaml-manual": "*",
+    "@opam/odoc": "*"
   }
 }
