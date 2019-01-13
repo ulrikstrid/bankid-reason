@@ -1,7 +1,7 @@
 (library
   (name lib)
   (flags (-w -40 -w +26))
-  (public_name bankid)
+  (public_name bankid-reason)
   (libraries
     console.lib
     pastel.lib

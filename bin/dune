@@ -1,6 +1,6 @@
 (executable
   (name BankId)
-  (package bankid)
+  (package bankid-reason)
   (public_name BankId.exe)
   (libraries
     lib
@@ -13,5 +13,5 @@
 
 (install
   (section bin)
-  (package bankid) 
+  (package bankid-reason) 
   (files FPTestcert2_20150818_102329.crt cert.crt TestBankIDSSLRootCAv1Test.crt))
