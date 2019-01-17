@@ -30,8 +30,8 @@ jobs:
       - script: "esy build"
         displayName: "esy build"
       - template: build-docs.yml
-      - script: "esy test"
-        displayName: "Test command"
+      #- script: "esy test"
+      #  displayName: "Test command"
       - script: "esy release"
         displayName: "esy release"
       - template: utils/publish-build-cache.yml
