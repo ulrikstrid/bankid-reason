@@ -27,6 +27,7 @@ jobs:
         displayName: "esy install"
       - script: "esy build"
         displayName: "esy build"
+      - template: build-docs.yml
       - script: "esy test"
         displayName: "Test command"
       - script: "esy release"

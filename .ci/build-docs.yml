@@ -1,0 +1,12 @@
+steps:
+  - script: "esy doc"
+    displayName: "Build docs"
+
+  - script: echo '##vso[task.setvariable variable=docsPath]'$(esy echo '#{self.target_dir}/default/_doc')
+    displayName: "Save docsPath in variable"
+
+  - task: PublishBuildArtifacts@1
+    displayName: "Publish Artifact: Docs"
+    inputs:
+      PathtoPublish: ${{ docsPath }}
+      ArtifactName: Docs

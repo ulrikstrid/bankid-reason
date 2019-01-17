@@ -14,7 +14,10 @@
   },
   "scripts": {
     "test": "esy x BankId.exe",
-    "watch": "esy dune build -p #{self.name} --watch"
+    "watch": "esy dune build -p #{self.name} --watch",
+    "doc": "refmterr esy dune build @doc -p #{self.name}",
+    "opendoc": "esy open '#{self.target_dir}/default/_doc/_html/index.html'",
+    "echodoc": "esy echo '#{self.target_dir}/default/_doc/_html/index.html'"
   },
   "dependencies": {
     "@opam/dune": "*",
