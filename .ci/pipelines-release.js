@@ -22,8 +22,8 @@ const packageJson = JSON.stringify(
       "postinstall.js",
       "esyInstallRelease.js",
       "platform-linux/",
-      "platform-darwin/",
-      "platform-windows-x64/"
+      "platform-darwin/"
+      //"platform-windows-x64/"
     ]
   },
   null,
@@ -40,7 +40,7 @@ fs.writeFileSync(
 
 console.log("Copying LICENSE");
 fs.copyFileSync(
-  path.join(__dirname, "..", "MIT-LICENSE"),
+  path.join(__dirname, "..", "LICENSE"),
   path.join(__dirname, "..", "_release", "LICENSE")
 );
 

@@ -15,12 +15,12 @@ var fs = require("fs");
 var os = require("os");
 var platform = process.platform;
 
-var packageJson = require('./package.json');
-var binariesToCopy = Object.keys(packageJson.bin).map(function(name) {
-  return packageJson.bin[name]
-}).concat([
-  "esyInstallRelease.js"
-]);
+var packageJson = require("./package.json");
+var binariesToCopy = Object.keys(packageJson.bin)
+  .map(function(name) {
+    return packageJson.bin[name];
+  })
+  .concat(["esyInstallRelease.js"]);
 var foldersToCopy = ["bin", "_export"];
 
 function copyRecursive(srcDir, dstDir) {
@@ -150,6 +150,9 @@ try {
 
 switch (platform) {
   case "win32":
+    console.warn("Sorry, this lib is not compatible with windows yet");
+    process.exit(1);
+
     if (arch() !== "x64") {
       console.warn("error: x86 is currently not supported on Windows");
       process.exit(1);

@@ -37,7 +37,7 @@ jobs:
     dependsOn:
       - Linux
       - macOS
-      - Windows
+      # - Windows
     pool:
       vmImage: macOS-10.13
       demands: node.js
