@@ -8,5 +8,5 @@ steps:
   - task: PublishBuildArtifacts@1
     displayName: "Publish Artifact: Docs"
     inputs:
-      PathtoPublish: ${{ docsPath }}
+      PathtoPublish: $(docsPath)
       ArtifactName: Docs
