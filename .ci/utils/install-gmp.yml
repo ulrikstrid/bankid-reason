@@ -4,4 +4,4 @@ parameters:
 steps:
   - bash: 'brew install gmp'
     displayName: 'Install gmp'
-    condition: eq(parameters['platform'], 'macOS')
+    condition: eq(${{ parameters.platform }}, 'macOS')
