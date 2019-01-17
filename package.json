@@ -42,13 +42,14 @@
     "@opam/httpkit": "ostera/httpkit:httpkit.opam#5ffcdeb",
     "@opam/httpkit-lwt": "ostera/httpkit:httpkit-lwt.opam#5ffcdeb",
     "@opam/httpaf": "anmonteiro/httpaf:httpaf.opam#57e9dd2",
-    "@opam/httpaf-lwt": "anmonteiro/httpaf:httpaf-lwt.opam#57e9dd2"
+    "@opam/httpaf-lwt": "anmonteiro/httpaf:httpaf-lwt.opam#57e9dd2",
+    "@opam/faraday": "ulrikstrid/faraday:faraday.opam#1f67597",
+    "@opam/faraday-lwt-unix": "ulrikstrid/faraday:faraday-lwt-unix.opam#1f67597",
+    "@opam/faraday-lwt": "ulrikstrid/faraday:faraday-lwt.opam#1f67597"
   },
   "devDependencies": {
     "@opam/merlin": "*",
     "ocaml": "~4.6.0",
-    "@opam/odig": "*",
-    "@opam/ocaml-manual": "*",
     "@opam/odoc": "*"
   }
 }
