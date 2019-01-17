@@ -6,18 +6,18 @@
 interface BankIdCollect {
   orderRef: string;
   status: "pending" | "failed" | "complete";
-  hintCode:  // (pending)
+  hintCode:  // We have this when status is "pending"
     | "outstandingTransaction"
     | "noClient"
     | "started"
     | "userSign"
-    // (failed)
+    // ...or "failed"
     | "expiredTransaction"
     | "certificateErr"
     | "userCancel"
     | "cancelled"
     | "startFailed"
-    // (both)
+    // This doesn't exist but others could be added
     | "unknown";
 
   // We have this when status is "complete"
@@ -29,7 +29,7 @@ interface BankIdCollect {
       surname: string;
     };
     device: {
-      ip: string; // could be used to constrain ip
+      ipAddress: string; // could be used to constrain ip
     };
     cert: {
       notBefore: string; // unix ms

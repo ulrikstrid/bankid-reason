@@ -55,7 +55,15 @@ let authAndCollect = (pno): unit =>
         | Ok(body) =>
           let authResponse = Lib.Auth.parseResponse(body);
           Lib.Collect.collectUntilComplete(testConfig, authResponse.orderRef)
-          >|= logRes;
+          >|= (
+            r =>
+              switch (r) {
+              | Ok(completionData) =>
+                Logs.app(m => m("Auhtenticated %s", completionData.user.name))
+              | Error(x) =>
+                Logs.err(m => m("Oops! %s", Lib.Util.error_to_string(x)))
+              }
+          );
         | Error(x) =>
           Lwt.return(
             Logs.err(m => m("Oops! %s", Lib.Util.error_to_string(x))),
